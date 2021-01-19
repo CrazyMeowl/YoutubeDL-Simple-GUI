@@ -174,6 +174,9 @@ def StartDownload(form):
 			elif "youtube.com" in LN:
 				LN = LN
 				FINAL = YOU + log + FORMAT + outFolder + LN
+			#https://soundcloud.com/rapital/rap-cham-thoi-hndcmm-rpt-mck-x-rpt-orijinn-ft-rz-ma-official-audio
+			elif 'soundcloud.com' in LN:
+				FINAL = YOU + log + FORMAT + outFolder + LN
 			else:
 				search = "\"ytsearch"+num+":"+LN+"\""
 				FINAL = YOU + log + FORMAT + outFolder + search
