@@ -47,7 +47,7 @@ Numtextbox.grid(row = 5,column = 0)
 Numtextbox.insert(0,"1")
 
 #Format Row
-FORMATrow = 2;
+FORMATrow = 2
 
 form = [0]
 #function to do when click button

@@ -84,8 +84,7 @@ def k2(res):
 	restext.grid(row = FORMATrow + 4,column = 4)
 	res.append(3)
 def k4(res):
-	restext = Label(root, text="  4K Selected  ")
-	restext.grid(row = FORMATrow + 4,column = 4)
+	restext = Label(root, text="  4K Selected  ").grid(row = FORMATrow + 4,column = 4)
 	res.append(4)
 
 def StartDownload(form):
