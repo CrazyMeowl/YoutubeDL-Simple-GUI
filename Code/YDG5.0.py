@@ -56,6 +56,7 @@ class dtos():
 
 	def download_check(self,action):
 		if action == "download":
+		
 			#print("hehe")
 			self.lan = lan_textbox.get()
 			#print(self.lan)
@@ -84,8 +85,12 @@ class dtos():
 					if "mp3" in self.format:
 						FORMAT = "--extract-audio --audio-format mp3 "
 					elif "mp4" in self.format:
+						if self.lower_res == "":
+							tkinter.messagebox.showwarning(title="Warning", message="Please select a resolution to download !!!")
+							return 0
 						#FORMAT = "--format bestvideo[height>"+ self.lower_res +"][height<="+ self.upper_res +"]"#[ext=mp4]+bestaudio[ext=m4a] "
-						FORMAT = "--format \"bestvideo[height>"+ self.lower_res +"][height<="+ self.upper_res +"][ext=mp4]+bestaudio[ext=m4a]\" "
+						else:
+							FORMAT = "--format \"bestvideo[height>"+ self.lower_res +"][height<="+ self.upper_res +"][ext=mp4]+bestaudio[ext=m4a]\" "
 					elif "webm" in self.format:
 						FORMAT = "--format \"bestvideo[height>"+ self.lower_res +"][height<="+ self.upper_res +"][ext=webm]+bestaudio[ext=webm]\" "
 
@@ -125,6 +130,7 @@ class dtos():
 					tkinter.messagebox.showwarning(title="Warning", message="Please input the number of video you want to download")
 					#tkinter.messagebox.showerror(title="Error", message="Error : " + str(bug))
 					#print(bug)
+
 		elif action == "check":		
 			self.lan = lan_textbox.get()
 			if len(self.lan) == 0 :
